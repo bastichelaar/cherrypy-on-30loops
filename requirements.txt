@@ -1,0 +1,2 @@
+CherryPy==3.2.0
+cherrys>=0.3
