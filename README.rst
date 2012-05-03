@@ -7,5 +7,13 @@ on 30loops.
 App creation
 ------------
 
-``thirty create app helloworld git://github.com/bastichelaar/30loops-cherrypy.git --root . --flavor wsgi --wsgi-entrypoint wsgi:application``
+The CherryPy app will be run by Gunicorn as a regular WSGI app. Therefore we
+specify the WSGI entrypoint, and create a WSGI flavored app:
 
+``thirty create app helloworld git://github.com/bastichelaar/30loops-cherrypy.git --flavor wsgi --wsgi-entrypoint wsgi:application``
+
+Then deploy:
+
+``thirty deploy helloworld``
+
+And you're done!
